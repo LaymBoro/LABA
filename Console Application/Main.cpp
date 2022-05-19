@@ -4,6 +4,13 @@ int main()
 {
 	Line line;
 	line.input();
-	line.print();
+	try
+	{
+		line.print();
+	}catch(...)
+	{
+		std::cout << "RGB<256!";
+	}
+	
 	return 0;
 }

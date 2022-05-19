@@ -56,17 +56,21 @@ void LineStyle::styling()
 {
 	int type;
 	unsigned int thickness;
-	unsigned __int8 red, green, blue;
+	int red, green, blue;
 	std::cout << "Chose line type: \n" << "solid = 1, dash = 2, dot = 3, dashdot = 4, dashdotdot = 5\n";
 	std::cin >> type;
 	std::cout << "Chose thickness: \n";
 	std::cin >> thickness;
-	std::cout << "Chose color: \n Red: \n";
+	std::cout << "Chose color: \nRed: \n";
 	std::cin >> red;
 	std::cout << "Green: \n";
 	std::cin >> green;
 	std::cout << "Blue: \n";
 	std::cin >> blue;
+	if(red>255||green>255||blue>255)
+	{
+		throw 1;
+	}
 	setStyle(type);
 	color.setRed(red);
 	color.setGreen(green);

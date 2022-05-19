@@ -2,9 +2,9 @@
 
 Line::Line()
 {
-	start;
-	end;
-	style;
+	start = Point();
+	end = Point();
+	style = LineStyle{};
 }
 
 void Line::setPoints()
@@ -21,7 +21,7 @@ void Line::print()
 {
 	int translocationX = end.getX() - start.getX();
 	int translocationY = end.getY() - start.getY();
-	std::cout << "(" << translocationX << "; " << translocationY << ")";
+	std::cout << "\n(" << translocationX << "; " << translocationY << ")\n";
 	std::cout << style;
 }
 

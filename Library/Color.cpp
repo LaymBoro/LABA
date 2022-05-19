@@ -1,7 +1,7 @@
 #include "Color.h"
 #include<iostream>
 
-int Color::getRed()
+uint8_t Color::getRed()
 {
 	return(red);
 }
@@ -13,32 +13,32 @@ Color::Color()
 	setBlue(0);
 }
 
-int Color::getGreen()
+uint8_t Color::getGreen()
 {
 	return (green);
 }
 
-int Color::getBlue()
+uint8_t Color::getBlue()
 {
 	return (blue);
 }
 
-void Color::setRed(unsigned __int8 red)
+void Color::setRed(uint8_t red)
 {
 	this->red = red;
 }
 
-void Color::setGreen(unsigned __int8 green)
+void Color::setGreen(uint8_t green)
 {
 	this->green = green;
 }
 
-void Color::setBlue(unsigned __int8 blue)
+void Color::setBlue(uint8_t blue)
 {
 	this->blue = blue;
 }
 
-Color::Color(unsigned __int8 red, unsigned __int8 green, unsigned __int8 blue)
+Color::Color(uint8_t red, uint8_t green, uint8_t blue)
 {
 	setRed(red);
 	setGreen(green);
@@ -47,6 +47,6 @@ Color::Color(unsigned __int8 red, unsigned __int8 green, unsigned __int8 blue)
 
 std::ostream& operator<<(std::ostream& out, Color& P)
 {
-	out << "Color: " << "\nRed: " << P.getRed() << "\nGreen: " << P.getGreen() << "\nBlue: " << P.getBlue();
+	out << "Color: " << "\nRed: " << (int)P.getRed() << "\nGreen: " << (int)P.getGreen() << "\nBlue: " << (int)P.getBlue();
 	return out;
 }

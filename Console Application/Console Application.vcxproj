@@ -139,6 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Library\Color.cpp" />
+    <ClCompile Include="..\Library\Line.cpp" />
+    <ClCompile Include="..\Library\LineStyle.cpp" />
+    <ClCompile Include="..\Library\Point.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

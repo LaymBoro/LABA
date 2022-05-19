@@ -1,22 +1,23 @@
 #pragma once
 #include<iostream>
 
+
 class Color
 {
 private:
-	unsigned __int8 red;
-	unsigned __int8 green;
-	unsigned __int8 blue;
+	uint8_t red;
+	uint8_t green;
+	uint8_t blue;
 
 public:
 	Color();
-	int getRed();
-	int getGreen();
-	int getBlue();
-	void setRed(unsigned __int8 red);
-	void setGreen(unsigned __int8 green);
-	void setBlue(unsigned __int8 blue);
-	Color(unsigned __int8 red, unsigned __int8 green, unsigned __int8 blue);
+	uint8_t getRed();
+	uint8_t getGreen();
+	uint8_t getBlue();
+	void setRed(uint8_t red);
+	void setGreen(uint8_t green);
+	void setBlue(uint8_t blue);
+	Color(uint8_t red, uint8_t green, uint8_t blue);
 	friend std::ostream& operator << (std::ostream& out, Color& P);
 };
 
